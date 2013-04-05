@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ImageSlider</title>
+    </head>
+    <body>
+        <section>
+            <h1>Summary</h1>
+            <p>
+                Change an unordered list to a slideshow. This is not limited to the content of the list-items. Images are used in the demo's, but this can be anything you want.<br/>
+                It uses the jQuery-library, but that's just to make the selectors and bindings easier. It should be easy enough to modify it to vanilla javascript.
+            </p>
+            <p>
+                Call the function as such:<br/> 
+                <code>
+                    // create variable (easy to use multiple instances of the imageslider on one page)<br/>
+                    var slideshow = new imageSlider(selector, options);<br/><br/>
+                    // initialize on document-ready<br/>
+                    $(document).ready(function() { slideshow.init(); }); 
+                </code>
+            </p>
+            <p>
+                Selector is the block which contains the ul
+                <br/><br/>
+                Options:
+                <ul>
+                    <li>
+                        <b>container</b>
+                        <p>By default the navigation is placed as a child of the <code>selector</code>-element (just like the slider is), but if you want the navigation to be in a different element than the slider, you can use <code>selector</code> for that element and <code>container</code> for the element in which the <code>ul</code> for the slider is.</p>
+                    </li>
+                    <li>
+                        <b>itemWidth</b>
+                        <p>Specify the width of one item</p>
+                    </li>
+                    <li>
+                        <b>numItems</b>
+                        <p>Specify the number of items</p>
+                    </li>
+                    <li>
+                        <b>slideshow</b>
+                        <p>Set <code>true</code> for automatic slideshow (defaults to <code>false</code>)</p>
+                    </li>
+                    <li>
+                        <b>speed</b>
+                        <p>Set the speed in milliseconds (defaults to <code>600</code>)</p>
+                    </li>
+                    <li>
+                        <b>waittime</b>
+                        <p>Set the waittime between slides in milliseconds (default to <code>5000</code>)</p>
+                    </li>
+                    <li>
+                        <b>skipLastItems</b>
+                        <p>Set the number of items that have to be skipped on the end. This can be used to show multiple slides at once (see demo2) to prevent the empty slide at the end (defaults to <code>0</code>)</p>
+                    </li>
+                    <li>
+                        <b>responsive</b>
+                        <p>Set <code>true</code> for responsive slider (defaults to <code>false</code>). Only works on reload for now, so resizing the browser-window won't help you here :)</p>
+                    </li>
+                    <li>
+                        <b>responsiveWidth</b>
+                        <p>Set the width below which the responsive slider should trigger (use in combination with <code>responsive</code>)</p>
+                    </li>
+                    <li>
+                        <b>slideNavigationClass</b>
+                        <p>Set the classname of the slider's navigation (pager) (defaults to <code>imageslide-navigation</code>)</p>
+                    </li>
+                    <li>
+                        <b>slideNavigationPrevClass</b>
+                        <p>Set the classname of the slider's previous button (defaults to <code>imageslide-previous-item</code>)</p>
+                    </li>
+                    <li>
+                        <b>slideNavigationNextClass</b>
+                        <p>Set the classname of the slider's next button (defaults to <code>imageslide-next-item</code>)</p>
+                    </li>
+                </ul>
+            </p>
+        </section>
+    </body>
+</html>

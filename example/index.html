@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ImageSlider</title>
+        <script src="js/jquery-1.7.2.min.js"></script>
+        <script src="js/imageSlider.js"></script>
+        <style>
+            section { clear: both; }
+            section.small { max-width: 500px; }
+            section.large { clear: both; min-width: 500px; max-width: 900px; }
+            .imageslider { position: relative; height: 200px; }
+            .imageslider ul { position: absolute; float: left; margin: 0; padding: 0; list-style-type: none; z-index: 10; }
+            .imageslider ul li { float: left; }
+            .imageslider ul li img { max-width: 100%; height: auto; }
+            .imageslide-navigation ul { float: left; clear: both; margin: 1em 0; padding: 0; list-style-type: none; }
+            .imageslide-navigation ul li { float: left; margin: 0 1em 0 0; }
+            .imageslide-navigation ul li.selected { font-weight: bold; }
+            .imageslide-previous-item, .imageslide-next-item { position: absolute; top: 80px; display: block; padding: 1em; background-color: white; z-index: 20; cursor: pointer; }
+            .imageslide-previous-item { left: 0; }
+            .imageslide-next-item { right: 0; }
+        </style>
+    </head>
+    <body>
+        <section class="small">
+            <h1>Demo 1: Slideshow large visuals</h1>
+            <div class="demo1 imageslider">
+                <ul>
+                    <li><img src="http://lorempixel.com/500/200" /></li>
+                    <li><img src="http://placekitten.com/500/200" /></li>
+                    <li><img src="http://lorempixel.com/500/200" /></li>
+                    <li><img src="http://placekitten.com/500/200" /></li>
+                    <li><img src="http://lorempixel.com/500/200" /></li>
+                </ul>
+            </div>
+            <script>
+            var demo1 = new imageSlider(".demo1", {"itemWidth" : 500, "numItems" : 5, "slideshow" : true});
+            $(document).ready(function() { demo1.init(); });
+            </script>
+        </section>
+        <section class="small">
+            <h1>Demo 2: Manual slideshow</h1>
+            <div class="demo2 imageslider">
+                <ul>
+                    <li><img src="http://lorempixel.com/250/200" /></li>
+                    <li><img src="http://placekitten.com/250/200" /></li>
+                    <li><img src="http://lorempixel.com/250/200" /></li>
+                    <li><img src="http://placekitten.com/250/200" /></li>
+                    <li><img src="http://lorempixel.com/250/200" /></li>
+                </ul>
+            </div>
+            <script>
+            var demo2 = new imageSlider(".demo2", {"itemWidth" : 250, "numItems" : 5, "skipLastItems" : 1});
+            $(document).ready(function() { demo2.init(); });
+            </script>
+        </section>
+        <section class="large">
+            <h1>Demo 3: Responsive</h1>
+            <div class="demo3 imageslider">
+                <ul>
+                    <li><img src="http://lorempixel.com/900/200" /></li>
+                    <li><img src="http://placekitten.com/900/200" /></li>
+                    <li><img src="http://lorempixel.com/900/200" /></li>
+                    <li><img src="http://placekitten.com/900/200" /></li>
+                    <li><img src="http://lorempixel.com/900/200" /></li>
+                </ul>
+            </div>
+            <script>
+            var demo3 = new imageSlider(".demo3", {"itemWidth" : 900, "numItems" : 5, "slideshow" : true, "responsive" : true, "responsiveWidth" : 900});
+            $(document).ready(function() { demo3.init(); });
+            </script>
+        </section>
+    </body>
+</html>
