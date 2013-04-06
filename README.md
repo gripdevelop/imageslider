@@ -17,15 +17,15 @@ Selector is the block which contains the ul
 
 ### Options:
 
-* **container:** By default the navigation is placed as a child of the ``selector``-element (just like the slider is), but if you want the navigation to be in a different element than the slider, you can use ``selector`` for that element and ``container`` for the element in which the ``ul`` for the slider is.
-* **itemWidth:** Specify the width of one item
-* **numItems:** Specify the number of items
-* **slideshow:** Set ``true`` for automatic slideshow (defaults to ``false``)
-* **speed:** Set the speed in milliseconds (defaults to ``600``)
-* **waittime:** Set the waittime between slides in milliseconds (default to ``5000``)
-* **skipLastItems:** Set the number of items that have to be skipped on the end. This can be used to show multiple slides at once (see demo2) to prevent the empty slide at the end (defaults to ``0``)
-* **responsive:** Set ``true`` for responsive slider (defaults to ``false``). Only works on reload for now, so resizing the browser-window won't help you here :)
-* **responsiveWidth:** Set the width below which the responsive slider should trigger (use in combination with ``responsive``)
-* **slideNavigationClass:** Set the classname of the slider's navigation (pager) (defaults to ``imageslide-navigation``)
-* **slideNavigationPrevClass:** Set the classname of the slider's previous button (defaults to ``imageslide-previous-item``)
-* **slideNavigationNextClass:** Set the classname of the slider's next button (defaults to ``imageslide-next-item``)
+* **itemWidth:** Specify the width of one item (required)
+* **numItems:** Specify the number of items (required)
+* **container:** By default the navigation is placed as a child of the ``selector``-element (just like the slider is), but if you want the navigation to be in a different element than the slider, you can use ``selector`` for that element and ``container`` for the element in which the ``ul`` for the slider is (optional)
+* **slideshow:** Set ``true`` for automatic slideshow (optional, defaults to ``false``)
+* **speed:** Set the speed in milliseconds (optional, defaults to ``600``)
+* **waittime:** Set the waittime between slides in milliseconds (optional, default to ``5000``)
+* **skipLastItems:** Set the number of items that have to be skipped on the end. This can be used to show multiple slides at once (see demo2) to prevent the empty slide at the end (optional, defaults to ``0``)
+* **responsive:** Set ``true`` for responsive slider (optional, defaults to ``false``). Only works on reload for now, so resizing the browser-window won't help you here :)
+* **responsiveWidth:** Set the width below which the responsive slider should trigger (optional, use in combination with ``responsive``)
+* **slideNavigationClass:** Set the classname of the slider's navigation (pager) (optional, defaults to ``imageslide-navigation``)
+* **slideNavigationPrevClass:** Set the classname of the slider's previous button (optional, defaults to ``imageslide-previous-item``)
+* **slideNavigationNextClass:** Set the classname of the slider's next button (optional, defaults to ``imageslide-next-item``)
