@@ -1,6 +1,7 @@
-/**
- * @requires jquery
- */
+/*
+    Imageslider v1 (requires jQuery)
+    Copyright 2013 Grip MultiMedia BV <http://www.grip.nl/>
+*/
 function imageSlider(selector, opts)
 {
     // options
