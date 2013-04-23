@@ -40,8 +40,6 @@ function imageSlider(selector, opts)
         	
 	        	_this.itemWidth = $(_this.selector).width();
 	        	
-	        	console.log(_this.selector);
-	        	
 	        	newUlWidth = _this.numItems * _this.itemWidth;
 	        	$(_this.selector + ' ul').css('width', newUlWidth);
 	        	$(_this.selector + ' ul li').css('width', _this.itemWidth);
